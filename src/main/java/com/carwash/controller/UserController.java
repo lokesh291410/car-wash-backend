@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.util.List;
 
 @RestController
 @RequestMapping("/user")
@@ -18,7 +17,7 @@ import java.util.List;
 public class UserController {
     private final AIService aiService;
 
-    @PostMapping("/service-suggestions")
+    @PostMapping("/service-suggestion")
     public ResponseEntity<?> getCarWashServiceSuggestions(@RequestPart("images") MultipartFile images) throws IOException {
         //System.out.println("good");
         return aiService.analyzeImages(images);
