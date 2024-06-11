@@ -2,6 +2,7 @@ package com.carwash.mapper;
 
 import com.carwash.dto.ServicePackageDTO;
 import com.carwash.entity.ServicePackage;
+import org.springframework.context.annotation.Bean;
 
 public class ServicePackageMapper {
     public static ServicePackage mapToServicePackage(ServicePackageDTO servicePackageDTO) {
